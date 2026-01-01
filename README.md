@@ -308,3 +308,61 @@ A _Repository_ is a collection of related images (different versions of the same
 
 ### Building a _Docker Images_
 
+Deploy our app as a Docker container.
+
+We need to create a '_definition_' of how to build an _image_ from our application.
+
+And, **_Dockerfile_** is a text document that contains commands to assemble an image. Docker can then build an image by reading those instructions.
+
+### Structure of _Dockerfile_
+
+1. Base image
+    - Dockerfile starts from a _parent image_ or _base image_.
+    - _Base image_ is a runtime docker image, that your app is based on.
+    - Every _Dockerfile_ must start with `FROM`.
+    - To, write an instruction for the _base image_, `FROM` is used.
+    ```docker
+    FROM python:3.9
+    ```
+
+2. _Working directory_ inside _container_
+    - Creates a _working directory_ for the _container_ to run.
+    - All the `RUN` command that you'll give, will run from here.
+    - To, write an instruction for the _working directory_, `WORkDIR` is used.
+    ```docker
+    WORKDIR /app
+    ```
+
+3. Copy files into the _image_
+    - This command copies application files from _host_ into the _container_.
+    - Sets the _working directory_ for all the following commands. Like changing `cd ...`.
+    - To, write an instruction for copying, `COPY` is used.
+    ```docker
+    COPY  . /app
+    ```
+    - Here, `.` means copy everything into the `/app`.
+
+4. Execute commands while building the _image_
+    - This command runs once, and saves the result in the _image_.
+    - It happens at the build time, not when containers run.
+    - Used for installing _dependencies_, _packages_, and _compiling code_.
+    - To, write an instruction for executing commands, we use `RUN`.
+    ```docker
+    RUN pip install -r requirements.txt
+    ```
+
+5. Port
+    - It is for documenting the port.
+    - Command for this is `EXPOSE 8080`, this means that this _container_ expects traffic on the port `8080`.
+    ```docker
+    EXPOSE 8080
+    ```
+
+6. Execute when the _container_ starts
+    - This runs when the _container_ starts.
+    - And, only one `CMD` command per _Dockerfile_. If there are many commands in `CMD` statement then last one wins.
+    - To, write an instruction for this `CMD` is used.
+    ```docker
+    CMD ["python", "./app.py"]
+    ```
+
