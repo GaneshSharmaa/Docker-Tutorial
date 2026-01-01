@@ -216,3 +216,10 @@ Port binding
 docker run -p 8000:8000 my-fastapi-app
 ```
 
+### Stopping a _Docker Container_
+
+Command for stopping a _Docker container_:
+```docker
+docker stop {CONTAINER ID}
+```
+
