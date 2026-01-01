@@ -366,3 +366,16 @@ And, **_Dockerfile_** is a text document that contains commands to assemble an i
     CMD ["python", "./app.py"]
     ```
 
+### Some rules for _Dockerfile_
+
+- Order matters in _Dockerfile_.<br>
+Docker caches in layers.<br>
+If `requirements.txt` doesn’t change, Docker won’t reinstall _dependencies_.<br>
+That’s why we copy it **before** app code.
+
+- One instruction = one layer.<br>
+Too many `RUN` commands -> bigger _image_.
+```docker
+RUN apt-get update && apt-get install -y curl
+```
+
