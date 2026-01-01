@@ -208,11 +208,10 @@ Docker containers run on a specific port, and it is different for different tech
 The port for **_PyTorch_** won't be same for **_MongoDB_**.<br>
 For example the port for `nginx` is `80`.
 
-Syntax of port binding:
-```docker
-docker run -p HOST_PORT:CONTAINER_PORT IMAGE_NAME
-```
+Syntax of port binding:<br>
+`docker run -p HOST_PORT:CONTAINER_PORT IMAGE_NAME`
 
+Port binding
 ```docker
 docker run -p 8000:8000 my-fastapi-app
 ```
