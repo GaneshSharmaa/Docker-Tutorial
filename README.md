@@ -268,3 +268,43 @@ Here,
 - `80` is the port of the _host_ as well as of _container_ (following the standard)
 - `1.23` is the tag of the _image_
 
+### Public and Private Docker Registries
+
+Example of public docker registry is **_Docker Hub_**.
+
+Public registry is open to anyone.
+- Anyone can pull _images_
+- Anyone can push _images_ to their _repo_
+- _Images_ are visible to the public
+
+Whereas, there's also a private registry.
+
+Private registries have restricted access.
+- Only authorized users can pull _images_
+- _Images_ are hidden from the public
+- Used inside companies
+
+Private registry is used by companies when they build an _image_ that contains companies intellectual property, internal APIs, paid products, production systems, proprietary ML model, internal business logic, confidential stuff.
+
+They must not make this _registry_ public!
+
+Various _cloud service_ platforms offer the feature of _private registries_, for example, **AWS ECR**, **Google Artifact Registry**, **Azure Container Registry**, or any _self-hosted registry_.
+
+It is very important to understand, the difference between public and private registries.
+- We pull from public registries daily
+- We push to private registries in jobs
+- ML models are almost always stored in private registries
+- CI/CD pipelines rely heavily on private registries
+
+### Registry vs Repository
+
+A _Registry_ is a service providing storage to _images_.
+- It can host many repositories
+- Handle authentication
+- Allow pull and push
+
+A _Repository_ is a collection of related images (different versions of the same app).
+- Inside one repository you can have multiple image tags (versions)
+
+### Building a _Docker Images_
+
