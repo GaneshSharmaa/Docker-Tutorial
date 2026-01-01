@@ -216,6 +216,10 @@ Port binding
 docker run -p 8080:80 nginx:1.23
 ```
 
+And, more importantly, only one service can run on a specific port on the host.
+
+So, in above example, on port `8080` only `Nginx` service can run.
+
 ### Stopping a _Docker Container_
 
 Command for stopping a _Docker container_:
