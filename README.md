@@ -229,3 +229,18 @@ Command for stopping a _Docker container_:
 docker stop {CONTAINER ID}
 ```
 
+### Starting and Stopping the _Docker Container_
+
+Actually, `docker run {IMAGE NAME}` command creates a new container, everytime it is executed. Docker does not re-use the containers.
+
+So, `docker ps` command, only shows the running containers, it doesn't shows the containers that we made and stopped.
+
+So, to see all the containers, running or stopped, use command:
+```docker
+docker ps -a
+```
+
+Or run command:
+```docker
+docker ps --all
+```
