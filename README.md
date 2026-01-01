@@ -385,7 +385,7 @@ RUN apt-get update && apt-get install -y curl
 docker build -t my-app:1.0 .
 ```
 
-Here, `-t` means tag, without this it would have random name.
+Here, `-t` means _tag_, without this, it would have random name.
 
 `my-app` is the name given to the _Docker Image_, and `:1.0` is the version of it.
 
