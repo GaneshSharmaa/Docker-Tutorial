@@ -220,7 +220,7 @@ And, more importantly, only one service can run on a specific port on the host.
 
 So, in above example, on port `8080` only `Nginx` service can run.
 
-Also, it is a standard to use the same port on your host as container is using.
+Also, it is a standard to use the same port on your host as _container_ is using.
 
 ### Stopping a _Docker Container_
 
@@ -231,11 +231,11 @@ docker stop {CONTAINER ID}
 
 ### Starting and Stopping the _Docker Container_
 
-Actually, `docker run {IMAGE NAME}` command creates a new container, everytime it is executed. Docker does not re-use the containers.
+Actually, `docker run {IMAGE NAME}` command creates a new _container_, everytime it is executed. Docker does not re-use the _containers_.
 
-So, `docker ps` command, only shows the running containers, it doesn't shows the containers that we made and stopped.
+So, `docker ps` command, only shows the running _containers_, it doesn't shows the _containers_ that we made and stopped.
 
-So, to see all the containers, running or stopped, use command:
+So, to see all the _containers_, running or stopped, use command:
 ```docker
 docker ps -a
 ```
@@ -244,3 +244,14 @@ Or run command:
 ```docker
 docker ps --all
 ```
+
+This gives you list of all the _containers_, whether they are stopped or are running.
+
+### Restarting the stopped _Docker Container_
+
+To restart the already made _Docker container_, use command:
+```docker
+docker start {CONTAINER ID}
+```
+
+This will start one or more stopped containers.
