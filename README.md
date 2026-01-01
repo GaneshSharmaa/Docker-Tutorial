@@ -379,3 +379,15 @@ Too many `RUN` commands -> bigger _image_.
 RUN apt-get update && apt-get install -y curl
 ```
 
+### Build an _Image_
+
+```docker
+docker build -t my-app:1.0 .
+```
+
+Here, `-t` means tag, without this it would have random name.
+
+`my-app` is the name given to the _Docker Image_, and `:1.0` is the version of it.
+
+`.` means use current directory.
+
