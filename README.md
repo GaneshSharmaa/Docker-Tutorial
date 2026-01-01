@@ -220,6 +220,8 @@ And, more importantly, only one service can run on a specific port on the host.
 
 So, in above example, on port `8080` only `Nginx` service can run.
 
+Also, it is a standard to use the same port on your host as container is using.
+
 ### Stopping a _Docker Container_
 
 Command for stopping a _Docker container_:
