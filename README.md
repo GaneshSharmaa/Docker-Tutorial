@@ -184,3 +184,4 @@ You can now look for it by running this command
 docker ps
 ```
 
+- Docker generates a random name for the container automatically if you don't specify one.
