@@ -185,3 +185,8 @@ docker ps
 ```
 
 - Docker generates a random name for the container automatically if you don't specify one.
+
+In order to run a _Docker Container_ without blocking the terminal, we can use `-d` in the command, which stands for _detach_.
+```docker
+docker run -d nginx:1.23
+```
