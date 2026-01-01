@@ -190,3 +190,30 @@ In order to run a _Docker Container_ without blocking the terminal, we can use `
 ```docker
 docker run -d nginx:1.23
 ```
+
+### Port Binding
+
+Port binding is often called port mapping.
+
+Port binding connects a port on your host machine to a port inside the Docker container.
+
+Let's understand this by an analogy:<br>
+Container = apartment<br>
+Port = door number<br>
+Host = building<br>
+Port binding = front desk forwarding visitors to the right apartment
+
+Docker containers run on a specific port, and it is different for different technologies.
+
+The port for **_PyTorch_** won't be same for **_MongoDB_**.<br>
+For example the port for `nginx` is `80`.
+
+Syntax of port binding:
+```docker
+docker run -p HOST_PORT:CONTAINER_PORT IMAGE_NAME
+```
+
+```docker
+docker run -p 8000:8000 my-fastapi-app
+```
+
