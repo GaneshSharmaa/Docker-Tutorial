@@ -213,7 +213,7 @@ Syntax of port binding:<br>
 
 Port binding
 ```docker
-docker run -p 8000:8000 my-fastapi-app
+docker run -p 8080:80 nginx:1.23
 ```
 
 ### Stopping a _Docker Container_
