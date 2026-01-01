@@ -255,3 +255,16 @@ docker start {CONTAINER ID}
 ```
 
 This will start one or more stopped containers.
+
+### Naming a _Docker Container_
+
+Command to give a name to a _Docker container_:
+```docker
+docker run --name nginx-new -p 80:80 nginx:1.23
+```
+
+Here,
+- `nginx-new` is the name of the _Docker Container_
+- `80` is the port of the _host_ as well as of _container_ (following the standard)
+- `1.23` is the tag of the _image_
+
